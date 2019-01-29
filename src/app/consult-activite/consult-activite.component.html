@@ -1,0 +1,13 @@
+
+<p>
+  consult-activite works!
+</p>
+<h1>Test recuperation des params</h1>
+<ul>
+  <li>nom de l'activite  est :  <span *ngIf='!editAct'><b>{{param1}}</b></span>    <input *ngIf='editAct' type="text" class="txt" name="item" placeholder="..." [(ngModel)]="param1"/></li><br/>
+  <li *ngIf='param2 !=null'>param 2 est : {{param2}}</li>
+  <button type="button" class="btn btn-danger" (click)="removeElm()">Supprimer</button>
+  <button type="button" *ngIf='!editAct' class="btn btn-danger" (click)="showEditText()">Modifer</button>
+  <button type="button" *ngIf='editAct' class="btn btn-danger" (click)="saveEdition()">Sauvgarder</button>
+  <button type="button"  class="btn btn-danger" (click)="back()">Retour</button>
+</ul>
